@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_upload_images"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.udit.pmma.UploadImages">
+    <include layout="@layout/toolbar"
+        android:id="@+id/uploadToolbar"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/uploadToolbar">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical"
+            android:weightSum="100"
+            android:padding="@dimen/activity_horizontal_margin">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Please Uplaod the Images"
+                android:textAppearance="?android:textAppearanceLarge"
+                android:gravity="center"
+                android:id="@+id/currentProjectName"
+                android:layout_marginBottom="@dimen/activity_vertical_margin"/>
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:id="@+id/frontImage"
+                    android:clickable="true"
+                    android:background="@drawable/camera"
+                    android:elevation="4dp"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:hint="Description about image (100 word)"
+                android:background="@android:color/transparent"
+                android:maxLength="100"
+                android:id="@+id/frontText"/>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:id="@+id/leftsideImage"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:clickable="true"
+                android:background="@drawable/camera" />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:hint="Description about image (100 word)"
+                android:background="@android:color/transparent"
+                android:maxLength="100"
+                android:id="@+id/leftText"/>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:elevation="4dp"
+                android:id="@+id/rightsideImage"
+                android:background="@drawable/camera"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:adjustViewBounds="true"
+                android:clickable="true" />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:hint="Description about image (100 word)"
+                android:background="@android:color/transparent"
+                android:maxLength="100"
+                android:id="@+id/rightText"/>
+
+            <android.widget.Button
+                android:text="Upload Images"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/uploadPic"
+                android:layout_marginTop="35dp"
+                android:theme="@style/raisedButton"/>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
