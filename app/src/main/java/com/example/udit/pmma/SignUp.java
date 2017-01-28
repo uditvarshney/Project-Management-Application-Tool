@@ -28,6 +28,7 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.FirebaseException;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseAuthUserCollisionException;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.UserProfileChangeRequest;
 import com.google.firebase.database.ChildEventListener;
@@ -99,6 +100,7 @@ public class SignUp extends AppCompatActivity{
             }
         });
 
+
         // listener for user login and logout
         mAuthListener = new FirebaseAuth.AuthStateListener() {
             @Override
@@ -150,10 +152,6 @@ public class SignUp extends AppCompatActivity{
                 mAuth.createUserWithEmailAndPassword(email, phone).addOnCompleteListener(SignUp.this, new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
-                        if (!task.isSuccessful()) {
-                            Toast.makeText(getApplicationContext(), "login failed", Toast.LENGTH_LONG).show();
-                            progressDialog.dismiss();
-                        }
                         if (task.isSuccessful()) {
                             SharedPreferences.Editor editor=sharedPreferences.edit();
                             editor.putString("loginStatus","success");
@@ -166,6 +164,14 @@ public class SignUp extends AppCompatActivity{
                             userInfo.setAge(age);
                             userInfo.setLocation(location);
                             storeData();
+                        }
+                        else if (!task.isSuccessful() && task.getException() instanceof FirebaseAuthUserCollisionException) {
+                            Toast.makeText(getApplicationContext(), "User with this email Id already exists", Toast.LENGTH_LONG).show();
+                            progressDialog.dismiss();
+                        }
+                        if (!task.isSuccessful()) {
+                            Toast.makeText(getApplicationContext(), "Registration not successful may be due to bad network connection", Toast.LENGTH_LONG).show();
+                            progressDialog.dismiss();
                         }
 
                     }

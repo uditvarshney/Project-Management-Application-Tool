@@ -63,6 +63,7 @@ public class ProjectReview extends AppCompatActivity {
                 Log.d("view",view.toString());
                 Intent intent=new Intent(getApplicationContext(),OtherProfile.class);
                 intent.putStringArrayListExtra("othersWork",userDetails.get(position));
+                intent.putExtra("projectName",projectName);
                 startActivity(intent);
             }
 

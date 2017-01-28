@@ -12,83 +12,27 @@
         android:layout_width="match_parent"
         android:layout_height="fill_parent"
         android:layout_below="@+id/otherProfileToolbar">
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:padding="16dp"
-        android:weightSum="100">
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="fill_parent"
+            android:layout_height="match_parent"
             android:orientation="vertical"
-            android:layout_weight="60">
-            <de.hdodenhof.circleimageview.CircleImageView
-                android:layout_width="180dp"
-                android:layout_height="120dp"
-                android:layout_gravity="center_horizontal"
-                app:civ_border_width="@dimen/circularWidth"
-                android:src="@drawable/userpic"
-                app:civ_border_overlay="true"
-                android:layout_marginTop="20dp"
-                android:clickable="false"
-                android:id="@+id/otherUserPic"
-                app:civ_fill_color="@android:color/darker_gray"/>
+            android:padding="16dp">
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_gravity="center_horizontal"
-                android:text="User Name"
-                android:textColor="@android:color/black"
-                android:textSize="@dimen/text_size"
-                android:id="@+id/otheruserName"
-                android:layout_marginTop="10dp"/>
-        </LinearLayout>
-            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginTop="10dp"
-                android:layout_weight="40">
-                <android.support.v7.widget.CardView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    app:cardElevation="3dp"
-                    app:cardCornerRadius="8dp"
-                    app:cardUseCompatPadding="true"
-                    android:padding="8dp">
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="200dp"
-                        android:id="@+id/othersProfilePic1"/>
-                </android.support.v7.widget.CardView>
-                <android.support.v7.widget.CardView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    app:cardElevation="3dp"
-                    app:cardCornerRadius="8dp"
-                    app:cardUseCompatPadding="true"
-                    android:layout_marginTop="8dp"
-                    android:padding="8dp">
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="200dp"
-                        android:id="@+id/othersProfilePic2"/>
-                </android.support.v7.widget.CardView>
-                <android.support.v7.widget.CardView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    app:cardElevation="3dp"
-                    app:cardCornerRadius="8dp"
-                    app:cardUseCompatPadding="true"
-                    android:padding="8dp">
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="200dp"
-                        android:id="@+id/othersProfilePic3"/>
-                </android.support.v7.widget.CardView>
-            </LinearLayout>
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@android:color/black"
+                android:id="@+id/otherProjectName"
+                android:hint="Project Name"
+                android:gravity="center_horizontal"
+                android:layout_marginBottom="16dp"/>
+            <android.support.v7.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/otherUsersData">
 
-    </LinearLayout>
+            </android.support.v7.widget.RecyclerView>
+
+        </LinearLayout>
     </ScrollView>
 </RelativeLayout>

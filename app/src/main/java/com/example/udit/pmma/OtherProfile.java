@@ -2,6 +2,8 @@ package com.example.udit.pmma;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -21,53 +23,28 @@ public class OtherProfile extends AppCompatActivity {
     Toolbar toolbar;
     TextView textView;
     private String userName;
-    private CircleImageView circleImageView;
     private ImageView pic1,pic2,pic3;
+    private String projectName;
+    private RecyclerView recyclerView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_other_profile);
         init();
         userData=getIntent().getStringArrayListExtra("othersWork");
+        projectName=getIntent().getStringExtra("projectName");
         userName=userData.get(userData.size()-1);
         toolbar.setTitle(userName);
         setSupportActionBar(toolbar);
-        textView.setText(userName);
-        for(int i=0;i<userData.size();i++)
-        {
-            if(i==userData.size()-1){
-                textView.setText(userData.get(i));
-            }
-            else if(i==0)
-            {
-                Glide.with(this).using(new FirebaseImageLoader()).load(FirebaseStorage.getInstance().getReference(userData.get(0)))
-                        .crossFade().diskCacheStrategy(DiskCacheStrategy.ALL).into(pic1);
-            }
-            else if(i==1)
-            {
-                Glide.with(this).using(new FirebaseImageLoader()).load(FirebaseStorage.getInstance().getReference(userData.get(i)))
-                        .crossFade().diskCacheStrategy(DiskCacheStrategy.ALL).into(pic2);
-            }
-            else if(i==2)
-            {
-                Glide.with(this).using(new FirebaseImageLoader()).load(FirebaseStorage.getInstance().getReference(userData.get(i)))
-                        .crossFade().diskCacheStrategy(DiskCacheStrategy.ALL).into(pic3);
-            }
-        }
-
-        //Glide.with(this).using(new FirebaseImageLoader()).load(FirebaseStorage.getInstance().getReference(userData.get(1)))
-        //        .crossFade().diskCacheStrategy(DiskCacheStrategy.ALL).into(pic2);
-        //Glide.with(this).using(new FirebaseImageLoader()).load(FirebaseStorage.getInstance().getReference(userData.get(2)))
-        //        .crossFade().diskCacheStrategy(DiskCacheStrategy.ALL).into(pic3);
+        textView.setText(projectName);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        recyclerView.setAdapter(new OtherUserAdapter(this,userData));
     }
 
     private void init() {
         userData=new ArrayList<>();
         toolbar=(Toolbar) findViewById(R.id.otherProfileToolbar);
-        textView=(TextView) findViewById(R.id.otheruserName);
-        circleImageView=(CircleImageView) findViewById(R.id.otherUserPic);
-        pic1=(ImageView) findViewById(R.id.othersProfilePic1);
-        pic2=(ImageView) findViewById(R.id.othersProfilePic2);
-        pic3=(ImageView) findViewById(R.id.othersProfilePic3);
+        textView=(TextView) findViewById(R.id.otherProjectName);
+        recyclerView=(RecyclerView) findViewById(R.id.otherUsersData);
     }
 }
