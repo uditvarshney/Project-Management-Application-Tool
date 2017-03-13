@@ -4,7 +4,7 @@
     android:id="@+id/activity_project_review"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.udit.pmma.ProjectReview"
+    tools:context="com.aniketudit.udit.pmma.ProjectReview"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <include layout="@layout/toolbar"
         android:id="@+id/projectReviewToolbar"/>
@@ -12,6 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
+        android:padding="16dp"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
         android:layout_below="@+id/projectReviewToolbar">
 

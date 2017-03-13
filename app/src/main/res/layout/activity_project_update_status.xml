@@ -5,17 +5,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@android:color/white"
-    tools:context="com.example.udit.pmma.ProjectUpdateStatus">
+    tools:context="com.aniketudit.udit.pmma.ProjectUpdateStatus">
     <include layout="@layout/toolbar"
         android:id="@+id/projectUpdateStatusToolbar"/>
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:padding="@dimen/activity_horizontal_margin"
-        android:layout_below="@+id/projectUpdateStatusToolbar">
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
+            android:padding="16dp"
+            android:layout_below="@+id/projectUpdateStatusToolbar"
             android:orientation="vertical">
             <TextView
                 android:layout_width="match_parent"
@@ -31,5 +28,4 @@
 
             </android.support.v7.widget.RecyclerView>
         </LinearLayout>
-    </ScrollView>
 </RelativeLayout>

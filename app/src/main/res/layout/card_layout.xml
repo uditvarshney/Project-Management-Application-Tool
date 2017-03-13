@@ -12,7 +12,7 @@
             android:layout_height="45dp"
             android:clickable="true"
             app:cardCornerRadius="5dp"
-            app:cardElevation="25dp"
+            app:cardElevation="3dp"
             app:contentPadding="4dp"
             app:cardBackgroundColor="#009688"
             android:id="@+id/cardAdapter"

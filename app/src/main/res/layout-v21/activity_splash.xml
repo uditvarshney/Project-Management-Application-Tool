@@ -4,7 +4,7 @@
     android:id="@+id/activity_splash"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.udit.pmma.Splash"
+    tools:context="com.aniketudit.udit.pmma.Splash"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/colorPrimary"
     android:theme="@style/Theme.AppCompat">

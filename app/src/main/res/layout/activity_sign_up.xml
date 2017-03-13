@@ -4,158 +4,229 @@
     android:id="@+id/activity_sign_up"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.udit.pmma.SignUp"
+    tools:context="com.aniketudit.udit.pmma.SignUp"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@android:color/white">
     <include layout="@layout/toolbar"
         android:id="@+id/signUptoolbar"/>
-    <ScrollView
+    <TabHost
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/signUptoolbar">
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:paddingTop="@dimen/activity_vertical_margin"
-        android:paddingLeft="@dimen/activity_horizontal_margin"
-        android:paddingBottom="@dimen/activity_vertical_margin"
-        android:paddingRight="@dimen/activity_horizontal_margin"
-        android:orientation="vertical"
-        android:weightSum="100">
+        android:id="@+id/tab_host"
+        android:layout_below="@+id/signUptoolbar"
+        >
         <LinearLayout
-            android:layout_width="fill_parent"
+            android:layout_width="match_parent"
             android:layout_height="fill_parent"
-            android:orientation="vertical"
-            android:layout_weight="80"
-            >
-            <android.support.v7.widget.AppCompatTextView
-                style="@style/CodeFont.Big.Central"
-                android:textStyle="bold"
-                android:text="Sign-Up" />
-            <de.hdodenhof.circleimageview.CircleImageView
-                android:layout_width="180dp"
-                android:layout_height="120dp"
-                android:layout_gravity="center_horizontal"
-                app:civ_border_width="@dimen/circularWidth"
-                android:src="@drawable/userpic"
-                app:civ_border_overlay="true"
-                android:layout_marginTop="20dp"
-                android:clickable="true"
-                android:id="@+id/sign_upUserpic"
-                app:civ_fill_color="@android:color/darker_gray"/>
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:orientation="vertical"
-            android:layout_weight="20">
-            <LinearLayout
-                android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
-                android:orientation="horizontal"
-                android:layout_marginTop="@dimen/activity_vertical_margin">
-                <android.support.v7.widget.AppCompatTextView
-                    style="@style/CodeFont.Medium"
-                    android:text="Username"/>
-                <android.support.v7.widget.AppCompatTextView
-                    style="@style/CodeFont.Medium"
-                    android:text=" *"
-                    android:textColor="@android:color/holo_red_light"/>
-            </LinearLayout>
-            <android.support.v7.widget.AppCompatEditText
-                style="@style/editText"
-                android:hint="Enter the UserName"
-                android:id="@+id/userText"/>
-            <LinearLayout
-                android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
-                android:orientation="horizontal"
-                android:layout_marginTop="@dimen/activity_vertical_margin">
-                <android.support.v7.widget.AppCompatTextView
-                    style="@style/CodeFont.Medium"
-                    android:text="Email-Id"/>
-                <android.support.v7.widget.AppCompatTextView
-                    style="@style/CodeFont.Medium"
-                    android:text=" *"
-                    android:textColor="@android:color/holo_red_light"/>
-            </LinearLayout>
-            <android.support.v7.widget.AppCompatEditText
-                style="@style/editText"
-                android:hint="Enter the valid Email Id"
-                android:inputType="textEmailAddress"
-                android:id="@+id/emailText"/>
-            <LinearLayout
-                android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
-                android:orientation="horizontal"
-                android:layout_marginTop="@dimen/activity_vertical_margin">
-                <android.support.v7.widget.AppCompatTextView
-                    style="@style/CodeFont.Medium"
-                    android:text="Mobile No"/>
-                <android.support.v7.widget.AppCompatTextView
-                    style="@style/CodeFont.Medium"
-                    android:text=" *"
-                    android:textColor="@android:color/holo_red_light"/>
-            </LinearLayout>
-            <android.support.v7.widget.AppCompatEditText
-                style="@style/editText"
-                android:hint="Enter the Mobile No"
-                android:inputType="number"
-                android:maxLength="10"
-                android:id="@+id/phoneText"/>
-            <LinearLayout
-                android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
-                android:orientation="horizontal"
-                android:layout_marginTop="@dimen/activity_vertical_margin">
-                <android.support.v7.widget.AppCompatTextView
-                    style="@style/CodeFont.Medium"
-                    android:text="Age"/>
-                <android.support.v7.widget.AppCompatTextView
-                    style="@style/CodeFont.Medium"
-                    android:text=" *"
-                    android:textColor="@android:color/holo_red_light"/>
-            </LinearLayout>
-            <android.support.v7.widget.AppCompatEditText
-                style="@style/editText"
-                android:hint="Enter the Age"
-                android:inputType="number"
-                android:id="@+id/ageText"/>
-            <LinearLayout
-                android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
-                android:orientation="horizontal"
-                android:layout_marginTop="@dimen/activity_vertical_margin">
-                <android.support.v7.widget.AppCompatTextView
-                    style="@style/CodeFont.Medium"
-                    android:text="Location"/>
-                <android.support.v7.widget.AppCompatTextView
-                    style="@style/CodeFont.Medium"
-                    android:text=" *"
-                    android:textColor="@android:color/holo_red_light"/>
-            </LinearLayout>
-            <android.support.v7.widget.AppCompatEditText
-                style="@style/editText"
-                android:hint="Enter the UserName"
-                android:clickable="false"
-                android:cursorVisible="false"
-                android:focusable="false"
-                android:focusableInTouchMode="false"
-                android:id="@+id/locationText"/>
-            <android.widget.Button
-                android:layout_width="wrap_content"
+            android:orientation="vertical">
+            <TabWidget
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:height="36dp"
-                android:minWidth="88dp"
-                android:text="Register"
-                android:layout_gravity="center_horizontal"
-                android:theme="@style/raisedButton"
-                android:layout_marginTop="@dimen/activity_vertical_margin"
-                android:layout_marginBottom="@dimen/activity_vertical_margin"
-                android:id="@+id/newUser"/>
+                android:id="@android:id/tabs">
+            </TabWidget>
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="vertical"
+                    android:id="@+id/tab1">
+                    <ScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:paddingTop="@dimen/activity_vertical_margin"
+                            android:paddingLeft="@dimen/activity_horizontal_margin"
+                            android:paddingBottom="@dimen/activity_vertical_margin"
+                            android:paddingRight="@dimen/activity_horizontal_margin"
+                            android:orientation="vertical"
+                            android:weightSum="100">
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent"
+                                android:orientation="vertical"
+                                android:layout_weight="80"
+                                >
+                                <de.hdodenhof.circleimageview.CircleImageView
+                                    android:layout_width="180dp"
+                                    android:layout_height="120dp"
+                                    android:layout_gravity="center_horizontal"
+                                    app:civ_border_width="@dimen/circularWidth"
+                                    android:src="@drawable/userpic"
+                                    app:civ_border_overlay="true"
+                                    android:layout_marginTop="20dp"
+                                    android:clickable="true"
+                                    android:id="@+id/sign_upUserpic"
+                                    app:civ_fill_color="@android:color/darker_gray"/>
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent"
+                                android:orientation="vertical"
+                                android:layout_weight="20">
+                                <LinearLayout
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="fill_parent"
+                                    android:orientation="horizontal"
+                                    android:layout_marginTop="@dimen/activity_vertical_margin">
+                                    <android.support.v7.widget.AppCompatTextView
+                                        style="@style/CodeFont.Medium"
+                                        android:text="Username"/>
+                                    <android.support.v7.widget.AppCompatTextView
+                                        style="@style/CodeFont.Medium"
+                                        android:text=" *"
+                                        android:textColor="@android:color/holo_red_light"/>
+                                </LinearLayout>
+                                <android.support.v7.widget.AppCompatEditText
+                                    style="@style/editText"
+                                    android:hint="Enter the UserName"
+                                    android:id="@+id/userText"/>
+                                <LinearLayout
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="fill_parent"
+                                    android:orientation="horizontal"
+                                    android:layout_marginTop="@dimen/activity_vertical_margin">
+                                    <android.support.v7.widget.AppCompatTextView
+                                        style="@style/CodeFont.Medium"
+                                        android:text="Email-Id"/>
+                                    <android.support.v7.widget.AppCompatTextView
+                                        style="@style/CodeFont.Medium"
+                                        android:text=" *"
+                                        android:textColor="@android:color/holo_red_light"/>
+                                </LinearLayout>
+                                <android.support.v7.widget.AppCompatEditText
+                                    style="@style/editText"
+                                    android:hint="Enter the valid Email Id"
+                                    android:inputType="textEmailAddress"
+                                    android:id="@+id/emailText"/>
+                                <LinearLayout
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="fill_parent"
+                                    android:orientation="horizontal"
+                                    android:layout_marginTop="@dimen/activity_vertical_margin">
+                                    <android.support.v7.widget.AppCompatTextView
+                                        style="@style/CodeFont.Medium"
+                                        android:text="Mobile No (Password)"/>
+                                    <android.support.v7.widget.AppCompatTextView
+                                        style="@style/CodeFont.Medium"
+                                        android:text=" *"
+                                        android:textColor="@android:color/holo_red_light"/>
+                                </LinearLayout>
+                                <android.support.v7.widget.AppCompatEditText
+                                    style="@style/editText"
+                                    android:hint="Enter the Mobile No"
+                                    android:inputType="number"
+                                    android:maxLength="10"
+                                    android:id="@+id/phoneText"/>
+                                <LinearLayout
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="fill_parent"
+                                    android:orientation="horizontal"
+                                    android:layout_marginTop="@dimen/activity_vertical_margin">
+                                    <android.support.v7.widget.AppCompatTextView
+                                        style="@style/CodeFont.Medium"
+                                        android:text="Age"/>
+                                    <android.support.v7.widget.AppCompatTextView
+                                        style="@style/CodeFont.Medium"
+                                        android:text=" *"
+                                        android:textColor="@android:color/holo_red_light"/>
+                                </LinearLayout>
+                                <android.support.v7.widget.AppCompatEditText
+                                    style="@style/editText"
+                                    android:hint="Enter the Age"
+                                    android:inputType="number"
+                                    android:id="@+id/ageText"/>
+                                <LinearLayout
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="fill_parent"
+                                    android:orientation="horizontal"
+                                    android:layout_marginTop="@dimen/activity_vertical_margin">
+                                    <android.support.v7.widget.AppCompatTextView
+                                        style="@style/CodeFont.Medium"
+                                        android:text="Location"/>
+                                    <android.support.v7.widget.AppCompatTextView
+                                        style="@style/CodeFont.Medium"
+                                        android:text=" *"
+                                        android:textColor="@android:color/holo_red_light"/>
+                                </LinearLayout>
+                                <android.support.v7.widget.AppCompatEditText
+                                    style="@style/editText"
+                                    android:hint="Enter the UserName"
+                                    android:clickable="false"
+                                    android:cursorVisible="false"
+                                    android:focusable="false"
+                                    android:focusableInTouchMode="false"
+                                    android:id="@+id/locationText"/>
+                                <android.widget.Button
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:height="36dp"
+                                    android:minWidth="88dp"
+                                    android:text="Register"
+                                    android:layout_gravity="center_horizontal"
+                                    android:theme="@style/raisedButton"
+                                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                                    android:layout_marginBottom="@dimen/activity_vertical_margin"
+                                    android:id="@+id/newUser"/>
 
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </ScrollView>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="vertical"
+                    android:padding="16dp"
+                    android:gravity="center_vertical"
+                    android:layout_gravity="center_vertical"
+                    android:id="@+id/tab2">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Email Id"
+                        style="@style/CodeFont.Medium" />
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Enter your Email Id"
+                        android:id="@+id/emailId"
+                        style="@style/editText"
+                        android:inputType="textEmailAddress" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Password"
+                        style="@style/CodeFont.Medium"
+                        android:layout_marginTop="10dp"/>
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Enter yourPassword"
+                        android:id="@+id/password"
+                        android:inputType="phone"
+                        style="@style/editText"
+                        android:maxLength="10"
+                        />
+                    <android.widget.Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/remoteUser"
+                        android:text="Sign In"
+                        android:height="36dp"
+                        android:minWidth="88dp"
+                        android:layout_gravity="center"
+                        android:theme="@style/raisedButton"
+                        android:layout_marginTop="@dimen/activity_vertical_margin"
+                        android:layout_marginBottom="@dimen/activity_vertical_margin" />
+                </LinearLayout>
+            </FrameLayout>
         </LinearLayout>
-
-    </LinearLayout>
-    </ScrollView>
+    </TabHost>
 </RelativeLayout>

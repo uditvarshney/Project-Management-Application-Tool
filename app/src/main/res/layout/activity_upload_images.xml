@@ -5,7 +5,7 @@
     android:id="@+id/activity_upload_images"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.udit.pmma.UploadImages">
+    tools:context="com.aniketudit.udit.pmma.UploadImages">
     <include layout="@layout/toolbar"
         android:id="@+id/uploadToolbar"/>
     <ScrollView

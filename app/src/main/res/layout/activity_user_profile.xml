@@ -5,58 +5,59 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context="com.example.udit.pmma.UserProfile">
+    tools:context="com.aniketudit.udit.pmma.UserProfile">
     <include layout="@layout/toolbar"
         android:id="@+id/userToolbar"/>
+    <!--
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@+id/userToolbar">
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/userToolbar">-->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:paddingTop="10dp"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"
+        android:layout_height="fill_parent"
+        android:padding="16dp"
         android:orientation="vertical"
+        android:layout_below="@+id/userToolbar"
         android:weightSum="100">
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_weight="60">
-            <de.hdodenhof.circleimageview.CircleImageView
-                android:layout_width="180dp"
-                android:layout_height="120dp"
-                android:layout_gravity="center_horizontal"
-                android:src="@drawable/userpic"
-                android:clickable="true"
-                app:civ_border_width="3dp"
-                android:id="@+id/userProfilepic"
-                android:layout_marginTop="@dimen/activity_vertical_margin"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="@dimen/activity_vertical_margin"
-                android:text="UserName"
-                android:textColor="@android:color/black"
-                android:textSize="@dimen/text_size"/>
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="fill_parent"
-            android:layout_weight="40"
-            android:orientation="vertical"
-            android:layout_marginTop="16dp">
-            <android.support.v7.widget.RecyclerView
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/thumbnail2_viewer">
+                android:layout_height="fill_parent"
+                android:orientation="vertical"
+                android:layout_weight="54"
+                android:layout_marginBottom="16dp">
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="180dp"
+                    android:layout_height="120dp"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@drawable/userpic"
+                    android:clickable="true"
+                    app:civ_border_width="3dp"
+                    android:id="@+id/userProfilepic"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:text="UserName"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/text_size"
+                    android:id="@+id/userProfileText"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="46"
+                android:orientation="vertical"
+                android:layout_marginTop="16dp">
+                <android.support.v7.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="fill_parent"
+                    android:id="@+id/thumbnail2_viewer">
 
-            </android.support.v7.widget.RecyclerView>
+                </android.support.v7.widget.RecyclerView>
 
+            </LinearLayout>
         </LinearLayout>
-    </LinearLayout>
-    </ScrollView>
 </RelativeLayout>

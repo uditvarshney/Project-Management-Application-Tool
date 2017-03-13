@@ -5,17 +5,14 @@
     android:id="@+id/activity_other_profile"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.udit.pmma.OtherProfile">
+    tools:context="com.aniketudit.udit.pmma.OtherProfile">
     <include layout="@layout/toolbar"
         android:id="@+id/otherProfileToolbar"/>
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="fill_parent"
-        android:layout_below="@+id/otherProfileToolbar">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
+            android:layout_below="@+id/otherProfileToolbar"
             android:padding="16dp">
             <TextView
                 android:layout_width="match_parent"
@@ -34,5 +31,4 @@
             </android.support.v7.widget.RecyclerView>
 
         </LinearLayout>
-    </ScrollView>
 </RelativeLayout>

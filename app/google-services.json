@@ -15,11 +15,107 @@
       },
       "oauth_client": [
         {
+          "client_id": "872295791709-qvc2b6e6pn1459qkdqrlll7rl7ku3cvd.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.udit.pmma",
+            "certificate_hash": "08d33f173d84e63eec208522897eee7463dab19a"
+          }
+        },
+        {
           "client_id": "872295791709-eqe1epf90pi4imuu0s0k6mjprm49boqn.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.example.udit.pmma",
-            "certificate_hash": "452367FAB12B0A2C1C2D20FA8DA196EA30C73E8F"
+            "certificate_hash": "452367fab12b0a2c1c2d20fa8da196ea30c73e8f"
+          }
+        },
+        {
+          "client_id": "872295791709-ie6eehmqpbpgjs284enc5npvbmcl2e67.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCW5SxJAwSmFwklRJOPO0xJ1FSDgDvwiEc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "872295791709-ie6eehmqpbpgjs284enc5npvbmcl2e67.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:872295791709:android:8259d817797a07df",
+        "android_client_info": {
+          "package_name": "com.example.faiz.pmmaadmin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "872295791709-cj54u9870nsc73h25j57m774gkpeh53b.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.faiz.pmmaadmin",
+            "certificate_hash": "452367fab12b0a2c1c2d20fa8da196ea30c73e8f"
+          }
+        },
+        {
+          "client_id": "872295791709-ie6eehmqpbpgjs284enc5npvbmcl2e67.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCW5SxJAwSmFwklRJOPO0xJ1FSDgDvwiEc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "872295791709-ie6eehmqpbpgjs284enc5npvbmcl2e67.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:872295791709:android:03fd8c97b03fa6fd",
+        "android_client_info": {
+          "package_name": "com.aniketudit.udit.pmma"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "872295791709-nbnl805kgbo25goa0a3r7lhn7ic0vgam.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.aniketudit.udit.pmma",
+            "certificate_hash": "08d33f173d84e63eec208522897eee7463dab19a"
           }
         },
         {

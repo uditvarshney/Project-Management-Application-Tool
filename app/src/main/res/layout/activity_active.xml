@@ -4,38 +4,29 @@
     android:id="@+id/activity_active"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.udit.pmma.Active"
+    tools:context="com.aniketudit.udit.pmma.Active"
     android:background="@android:color/white">
     <include layout="@layout/toolbar"
         android:id="@+id/activetoolbar"/>
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@+id/activetoolbar">
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="fill_parent"
-        android:layout_marginTop="@dimen/activity_vertical_margin"
-        android:layout_marginLeft="@dimen/activity_horizontal_margin"
-        android:layout_marginBottom="@dimen/activity_vertical_margin"
-        android:layout_marginRight="@dimen/activity_horizontal_margin"
-        android:orientation="vertical">
-        <TextView
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textColor="@android:color/black"
-            android:textSize="18dp"
-            android:layout_marginTop="8dp"
-            android:text="Choose the assigned projects to upload the status of project"/>
-        <android.support.v7.widget.RecyclerView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/recyclerView"
-            android:layout_marginTop="@dimen/activity_vertical_margin">
+            android:layout_height="match_parent"
+            android:layout_below="@+id/activetoolbar"
+            android:padding="16dp"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:textSize="18dp"
+                android:layout_marginTop="8dp"
+                android:text="Choose the assigned projects to upload the status of project"/>
+            <android.support.v7.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/recyclerView"
+                android:layout_marginTop="@dimen/activity_vertical_margin">
 
-        </android.support.v7.widget.RecyclerView>
-    </LinearLayout>
-
-    </ScrollView>
-
+            </android.support.v7.widget.RecyclerView>
+        </LinearLayout>
 </RelativeLayout>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.udit.pmma">
+    package="com.aniketudit.udit.pmma">
 
     <supports-screens
         android:anyDensity="true"
@@ -16,7 +16,7 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.CAMERA" />
 
     <uses-feature android:name="android.hardware.camera" />
 
@@ -26,38 +26,35 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
+        <activity android:name="com.aniketudit.udit.pmma.MainActivity">
         </activity>
-        <activity android:name=".Splash">
+        <activity android:name="com.aniketudit.udit.pmma.Splash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Inactive" />
-        <activity android:name=".SignUp" />
-        <activity android:name=".Active" />
+        <activity android:name="com.aniketudit.udit.pmma.Inactive" />
+        <activity android:name="com.aniketudit.udit.pmma.SignUp" />
+        <activity android:name="com.aniketudit.udit.pmma.Active" />
         <activity
-            android:name=".Selection"
+            android:name="com.aniketudit.udit.pmma.Selection"
             android:configChanges="keyboardHidden|orientation|screenSize" />
-        <activity android:name=".UploadImages" />
+        <activity android:name="com.aniketudit.udit.pmma.UploadImages"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="unspecified"/>
         <activity
-            android:name=".ProjectReview"
+            android:name="com.aniketudit.udit.pmma.ProjectReview"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:screenOrientation="unspecified" />
-        <activity android:name=".UserProfile" />
-        <activity android:name=".ProjectUpdateStatus" />
+        <activity android:name="com.aniketudit.udit.pmma.UserProfile" />
+        <activity android:name="com.aniketudit.udit.pmma.ProjectUpdateStatus" />
         <activity
-            android:name=".SelectCity"
+            android:name="com.aniketudit.udit.pmma.SelectCity"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:screenOrientation="unspecified" />
-        <activity android:name=".OtherProfile"></activity>
+        <activity android:name="com.aniketudit.udit.pmma.OtherProfile" />
     </application>
 
 </manifest>
